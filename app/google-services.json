@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "933032628",
+    "project_id": "petsit-62798",
+    "storage_bucket": "petsit-62798.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933032628:android:6f3f77546aa6f9a2b45de1",
+        "android_client_info": {
+          "package_name": "com.example.petsit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOrqoN6CwBYw6SKneZniy_nFfukVFsqSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

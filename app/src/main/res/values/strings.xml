@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PetSit</string>
+    <string name="descripcionfondo">Imagen de fondo</string>
+    <string name="msjbienvenida">¡Bienvenido a PetSit!</string>
+    <string name="descripcion">Tu app para ayudar a mascotas perdidas y encontradas, conectando corazones peludos con sus hogares.</string>
+    <string name="btncomenzar">COMENZAR</string>
+    <string name="tituloregistro">¿QUÉ DESEA REGISTRAR?</string>
+    <string name="registrousuario">Usuario</string>
+    <string name="registrorefugio">Refugio</string>
+    <string name="login">¿Ya tienes cuenta? Iniciar Sesión</string>
+    <string name="botondeusuario">Registrar Usuario</string>
+    <string name="botonrefugio">Registrar Refugio</string>
+    <string name="loginboton">Iniciar sesión</string>
+</resources>
