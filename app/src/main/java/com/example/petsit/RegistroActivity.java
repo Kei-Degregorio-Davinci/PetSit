@@ -6,45 +6,48 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 public class RegistroActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        // Configurar el Toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Configure back button
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(view -> {
 
-        toolbar.setNavigationOnClickListener(v -> onBackPressedDispatcher.onBackPressed());
+            Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
+            startActivity(intent);
 
-        // Configurar botones
+            finish();
+        });
+
+        // Configure buttons
         ImageButton btnRegistrarUsuario = findViewById(R.id.btnRegistrarUsuario);
         ImageButton btnRegistrarRefugio = findViewById(R.id.btnRegistrarRefugio);
 
-        btnRegistrarUsuario.setOnClickListener(view -> {
-            // Acción para registrar usuario
-            Toast.makeText(RegistroActivity.this, "Registrar Usuario", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(RegistroActivity.this, RegistroUsuarioActivity.class);
+        btnRegistrarUsuario.setOnClickListener(v -> {
+            // Action to register user
+            Toast.makeText(this, "Register User", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, RegistroUsuarioActivity.class);
             startActivity(intent);
         });
 
-        btnRegistrarRefugio.setOnClickListener(view -> {
-            // Acción para registrar refugio
-            Toast.makeText(RegistroActivity.this, "Registrar Refugio", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(RegistroActivity.this, RegistroRefugioActivity.class);
+        btnRegistrarRefugio.setOnClickListener(v -> {
+            // Action to register shelter
+            Toast.makeText(this, "Register Shelter", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, RegistroRefugioActivity.class);
             startActivity(intent);
         });
 
-        // Configurar TextView de login
+        // Configure login TextView
         TextView txtLogin = findViewById(R.id.txtLogin);
-        txtLogin.setOnClickListener(view -> {
-            // Acción para iniciar sesión
-            Toast.makeText(RegistroActivity.this, "Iniciar Sesión", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
+        txtLogin.setOnClickListener(v -> {
+            // Action to log in
+            Toast.makeText(this, "Log In", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
     }

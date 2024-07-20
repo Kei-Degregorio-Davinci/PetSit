@@ -4,6 +4,7 @@
     <string name="msjbienvenida">¡Bienvenido a PetSit!</string>
     <string name="descripcion">Tu app para ayudar a mascotas perdidas y encontradas, conectando corazones peludos con sus hogares.</string>
     <string name="btncomenzar">COMENZAR</string>
+    <string name="btnback">Boton volver</string>
     <string name="tituloregistro">¿QUÉ DESEA REGISTRAR?</string>
     <string name="registrousuario">Usuario</string>
     <string name="registrorefugio">Refugio</string>
