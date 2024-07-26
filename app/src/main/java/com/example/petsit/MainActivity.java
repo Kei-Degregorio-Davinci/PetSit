@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnComenzar = findViewById(R.id.btncomenzar);
         btnComenzar.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
+            Intent intent = new Intent(MainActivity.this, MenuUsuarioActivity.class);
             startActivity(intent);
         });
     }
