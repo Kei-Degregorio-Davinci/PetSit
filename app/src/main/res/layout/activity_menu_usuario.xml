@@ -15,10 +15,8 @@
         android:src="@drawable/fondomenu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
@@ -28,76 +26,100 @@
         android:layout_margin="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/btnback"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:src="@drawable/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <ImageButton
         android:id="@+id/btnExit"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="25dp"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_margin="28dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/btnExit"
+        android:padding="13sp"
+        android:scaleType="centerCrop"
         android:src="@drawable/iconosalir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/txtMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:textColor="#757575"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="@+id/backgroundImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
     <ImageView
         android:id="@+id/logoImage"
-        android:layout_width="403dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="415dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="28dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/logopetsit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        tools:ignore="VisualLintBounds" />
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/logoImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImage">
 
         <GridLayout
+            android:id="@+id/gridLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:alignmentMode="alignMargins"
             android:columnCount="2"
-            android:orientation="horizontal"
-            android:rowCount="5">
+            android:columnOrderPreserved="false"
+            android:rowCount="4">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="1dp"
                 android:orientation="vertical">
+
 
                 <ImageButton
                     android:id="@+id/btnRegistrarMascota"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
-                    android:contentDescription="@string/registrarmascota"
-                    android:padding="16dp"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/iconoboton"
+                    android:contentDescription="@string/registrarmascotaboton"
+                    android:scaleType="centerCrop"
+                    android:padding="19dp"
                     android:src="@drawable/iconoregistrarmascota" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/registrarmascota"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -105,25 +127,28 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:gravity="center"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/btnMascotaPerdida"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
-                    android:contentDescription="@string/mascotaperdida"
-                    android:padding="16dp"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/iconoboton"
+                    android:contentDescription="@string/mascotaperdidadaboton"
+                    android:scaleType="centerCrop"
+                    android:padding="19dp"
                     android:src="@drawable/iconomascotaperdida" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/mascotaperdida"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -131,25 +156,28 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="1dp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/btnMascotaEncontrada"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/iconoboton"
                     android:contentDescription="@string/mascotaencontradaboton"
-                    android:padding="16dp"
+                    android:scaleType="centerCrop"
+                    android:padding="19dp"
                     android:src="@drawable/iconomascotaencontrada" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/mascotaencontrada"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -157,25 +185,28 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:gravity="center"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/btnRefugios"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/iconoboton"
                     android:contentDescription="@string/refugiosboton"
-                    android:padding="16dp"
+                    android:scaleType="centerCrop"
+                    android:padding="19dp"
                     android:src="@drawable/iconorefugio" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/refugios"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -183,51 +214,28 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="15dp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/btnPetshop"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/iconoboton"
                     android:contentDescription="@string/petshopboton"
-                    android:padding="16dp"
+                    android:scaleType="centerCrop"
+                    android:padding="19dp"
                     android:src="@drawable/iconopetshop" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/petshop"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/btnChat"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
-                    android:contentDescription="@string/mensajesboton"
-                    android:padding="16dp"
-                    android:src="@drawable/iconochat" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:text="@string/mensajes"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -236,15 +244,18 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:gravity="center"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/btnPerfil"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/iconoboton"
                     android:contentDescription="@string/perfilboton"
-                    android:padding="16dp"
+                    android:scaleType="centerCrop"
+                    android:padding="19dp"
                     android:src="@drawable/iconoperfil" />
 
                 <TextView
@@ -254,66 +265,12 @@
                     android:gravity="center"
                     android:text="@string/perfil"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-
+                    android:textSize="18sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/btnAjustes"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
-                    android:contentDescription="@string/ajustesboton"
-                    android:padding="16dp"
-                    android:src="@drawable/iconoconfiguracion" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:text="@string/ajustes"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/btnQr"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/boton"
-                    android:contentDescription="@string/qr"
-                    android:padding="16dp"
-                    android:src="@drawable/iconoqr" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:text="@string/qr"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
 
         </GridLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

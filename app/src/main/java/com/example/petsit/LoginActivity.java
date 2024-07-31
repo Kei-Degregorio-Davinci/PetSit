@@ -29,11 +29,18 @@ public class LoginActivity extends AppCompatActivity {
         EditText etContrasenaLogin = findViewById(R.id.etContrasenaLogin);
         Button btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
         Button btnOlvideMiClave = findViewById(R.id.btnOlvideMiClave);
+        Button btnsoyrefugio = findViewById(R.id.btnsoyrefugio);
         ImageButton btnBack = findViewById(R.id.btnBack);
 
         // Configurar el botón de regreso
         btnBack.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this, RegistroActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+        btnsoyrefugio.setOnClickListener(view -> {
+            Intent intent = new Intent(LoginActivity.this, LoginRefugioActivity.class);
             startActivity(intent);
             finish();
         });
@@ -64,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                         // Inicio de sesión exitoso
                         Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
                         // Redirigir a la actividad principal
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MenuUsuarioActivity.class);
                         startActivity(intent);
                         finish();
                     } else {

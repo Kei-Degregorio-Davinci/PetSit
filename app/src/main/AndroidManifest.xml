@@ -13,6 +13,45 @@
         android:theme="@style/Theme.PetSit"
         tools:targetApi="31">
         <activity
+            android:name=".RegistrarAnimalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilRefugiosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SolicitudesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MisAnimalesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginRefugioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportarMascotaEncontradaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportarMascotaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AjustesUsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilUsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PetShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RefugiosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MascotaEncontradaActivity"
+            android:exported="false" />
+        <activity
             android:name=".MascotaPerdidaActivity"
             android:exported="false" />
         <activity

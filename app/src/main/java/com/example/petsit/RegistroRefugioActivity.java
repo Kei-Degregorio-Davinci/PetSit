@@ -45,7 +45,7 @@ public class RegistroRefugioActivity extends AppCompatActivity {
 
         // Configurar el botón de login
         btnLogin.setOnClickListener(view -> {
-            Intent intent = new Intent(RegistroRefugioActivity.this, LoginActivity.class);
+            Intent intent = new Intent(RegistroRefugioActivity.this, LoginRefugioActivity.class);
             startActivity(intent);
             finish();
         });
