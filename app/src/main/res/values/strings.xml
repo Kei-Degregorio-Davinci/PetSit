@@ -146,6 +146,14 @@
     <string name="edadAnimal5">Edad: 4 meses</string>
     <string name="txtnohayreportes">NO HAY REPORTES NUEVOS</string>
     <string name="registraranimal">Registrar un Animal</string>
+    <string name="solicitud">Solicitud de Adopción</string>
+    <string name="ver">Ver Solicitud</string>
+    <string name="direccion">Dirección</string>
+    <string name="editardireccion">Botón editar direccion</string>
+    <string name="emailRefugio">Email</string>
+    <string name="horarios">Horarios</string>
+    <string name="editarhorarios">Botón editar horarios</string>
+    <string name="nombreRefugio">Nombre</string>
 
 
 </resources>
