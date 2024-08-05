@@ -29,7 +29,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
         EditText etTelefono = findViewById(R.id.Telefono);
         EditText etEmail = findViewById(R.id.Email);
         EditText etContrasena = findViewById(R.id.Contrasena);
-        Button btnRegistrar = findViewById(R.id.btnRegistrar);
+        Button btnGuardar = findViewById(R.id.btnGuardar);
         ImageButton btnBack = findViewById(R.id.btnBack);
         Button btnLogin = findViewById(R.id.btnLogin);
 
@@ -41,7 +41,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
         });
 
         // Configurar el botón de registrar
-        btnRegistrar.setOnClickListener(view -> registrarUsuario(etNombre, etTelefono, etEmail, etContrasena));
+        btnGuardar.setOnClickListener(view -> registrarUsuario(etNombre, etTelefono, etEmail, etContrasena));
 
         // Configurar el botón de login
         btnLogin.setOnClickListener(view -> {
